@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Quote of the Day</title>
+
+</head>
+<body>/*it is used for making popups */
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please choose one of the options from the left.</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><button title="Choose 'Happy' if you're happy" onclick="getCategoryQuote('happy')">Happy</button></li>
+            <br>
+            <li><button title="if you are feeling low"onclick="getCategoryQuote('sad')">Sad</button></li>
+            <br>
+            <li><button title="choose 'motivational'if you want to motivate yourself"onclick="getCategoryQuote('motivational')">Motivational</button></li><br>
+            <li><button title="choose 'Funny'if you want to add some  fun in your life"onclick="getCategoryQuote('funny')">Funny</button></li><br>
+            <li><button title="Choose'inspirational' if you want to get inspired"onclick="getCategoryQuote('inspirational')">inspirational</button></li><br>
+            <li><button title="choose 'calm' if you want to remain cool minded"onclick="getCategoryQuote('calm')">Calm</button></li><br>
+            <li><button title="choose'excited'if you want to add excitement in your journey "onclick="getCategoryQuote('excited')">Excited</button></li><br>
+            <li><button title="choose 'grateful' if you want to feel grateful by the good thing that you have done"onclick="getCategoryQuote('grateful')">Gratefull</button></li><br>
+            <li><button title="choose 'uplifting' if you want to get uplifted for ur special task"onclick="getCategoryQuote('uplifting')">uplifting</button></li><br>
+            <li><button title="choose 'Success' To help yourself to ensure that you are in the path of Success"onclick="getCategoryQuote('Success')">Succes</button></li><br>
+            <li><button title="Choose 'Life' To realize that life is journey"onclick="getCategoryQuote('Life')">Life</button></li><br>
+            <li><button title="choose 'Friendship' if you want to know the the beauty of Friendship"onclick="getCategoryQuote('Friendship')">Friendship</button></li><br>
+            <li><button title="choose 'Love' if you want information about Love"onclick="getCategoryQuote('Love')">Love</button></li><br>
+            <li><button title="choose 'Wisdom' if you are intersted on knowledge "onclick="getCategoryQuote('Wisdom')">Wisdom</button></li><br>
+            <li><button title="choose 'Philosophical' if you have some interst on Philosophy"onclick="getCategoryQuote('Philosophical')">Philosophical</button></li><br>
+            <li><button title="choose 'Hope' if you have hope on someone "onclick="getCategoryQuote('Hope')">Hope</button></li><br>
+           
+        </ul>
+    </div>
+    <div class="scrollable">
+        <!-- Your content here -->
+        <p>Categories</p>
+      </div>
+    <div class="container">
+        <h1>Quote of the Day</h1>
+        <div id="quote-container">
+            <blockquote id="quote"></blockquote>
+            <p id="author"></p>
+        </div>
+        <button onclick="getRandomQuote()">New Quote</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

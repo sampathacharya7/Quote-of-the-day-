@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quote of the Day</title>
+    <style>
+        .quiz-feedback {
+            display: none; /* Initially hide the feedback message */
+        }
+    </style>
+   
+</head>
+<body>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+        </ul>
+    </nav>
+
+    
+
+    
+
+        <!-- Quiz Section -->
+        <div class="quiz">
+            <h2>Quiz Section</h2>
+            <form id="quiz-form">
+                <ol>
+                    <li>
+                        <p> "Tears are words that need to be written."?</p>
+                        <label>
+                            <input type="radio" name="q1" value="Paris"> Paris
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="Berlin"> Berlin
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="London"> London
+                        </label>
+                    </li>
+                    <li>
+                        <p>" Who wrote "To Kill a Mockingbird."?</p>
+                        <label>
+                            <input type="radio" name="q2" value="Harper Lee"> Harper Lee
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="Stephen King"> Stephen King
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="J.K. Rowling"> J.K. Rowling
+                        </label>
+                    </li>
+                    <li>
+                        <p> "The only way to do great work is to love what you do."?</p>
+                        <label>
+                            <input type="radio" name="q3" value="sam levenson">sam levenson 
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="steve jobs">steve jobs  
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="benjamin franklin">benjamin franklin 
+                        </label>
+                    </li>
+                    <li>
+                        <p> "When I started counting my blessings, my whole life turned around."?</p>
+                        <label>
+                            <input type="radio" name="q4" value="Willie Nelson">Willie Nelson
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="Zig ziglar">Zig ziglar 
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="benjamin franklin"> benjamin franklin
+                        </label>
+                    </li>
+                    <li>
+                        <p> "You are never too old to set another goal or to dream a new dream."?</p>
+                        <label>
+                            <input type="radio" name="q5" value="Willie Nelson">Willie Nelson
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="Desmond tutu">Desmond tutu
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="C.S.Lewis">C.S.Lewis
+                        </label>
+                    </li>
+                    <li>
+                        <p> "Hope is being able to see that there is light despite all of the darkness."?</p>
+                        <label>
+                            <input type="radio" name="q6" value="Brian tracy">Brian tracy
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="Desmond tutu">Desmond tutu
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="dalai lama">dalai lama
+                        </label>
+                    </li>
+                    <li>
+                        <p> "In the midst of movement and chaos, keep stillness inside of you."?</p>
+                        <label>
+                            <input type="radio" name="q7" value="Brian tracy">Brian tracy
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="Deepak chopra">Deepak chopra
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="dalai lama">dalai lama
+                        </label>
+                    </li>
+                    <li>
+                        <p> "I'm an idealist. I don't know where I'm going, but I'm on my way."?</p>
+                        <label>
+                            <input type="radio" name="q8" value="carl sandburg">carl sandburg
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="walt disney">walt disney
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="steve jobs">steve jobs
+                        </label>
+                    </li>
+                    <li>
+                        <p> "The way to get started is to quit talking and begin doing."?</p>
+                        <label>
+                            <input type="radio" name="q9" value="Brian tracy">Brian tracy
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="Deepak chopra">Deepak chopra
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="walt duisney">walt disney
+                        </label>
+                    </li>
+                    <li>
+                        <p> "The only limit to our realization of tomorrow will be our doubts of today."?</p>
+                        <label>
+                            <input type="radio" name="q10" value="Franklin D roosevelt">Franklin D roosevelt
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="carl sandburg">Carl sandburg
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="walt disney">walt disney
+                        </label>
+                    </li>
+                </ol>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="quiz-feedback" class="quiz-feedback"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Retrieve selected answers
+            var q1Answer = document.querySelector('input[name="q1"]:checked');
+            var q2Answer = document.querySelector('input[name="q2"]:checked');
+            var q3Answer = document.querySelector('input[name="q3"]:checked');
+            var q4Answer = document.querySelector('input[name="q4"]:checked');
+            var q5Answer = document.querySelector('input[name="q5"]:checked');
+            var q6Answer = document.querySelector('input[name="q6"]:checked');
+            var q7Answer = document.querySelector('input[name="q7"]:checked');
+            var q8Answer = document.querySelector('input[name="q8"]:checked');
+            var q9Answer = document.querySelector('input[name="q9"]:checked');
+            var q10Answer = document.querySelector('input[name="q10"]:checked');
+            
+
+            // Check if all questions are answered
+            if (q1Answer && q2Answer && q3Answer) {
+                // Check answers
+                var correctAnswers = 0;
+                if (q1Answer.value === 'Paris') correctAnswers++;
+                if (q2Answer.value === 'Harper Lee') correctAnswers++;
+                if (q3Answer.value === 'steve jobs') correctAnswers++;
+                if (q4Answer.value === 'Willie Nelson') correctAnswers++;
+                if (q5Answer.value === 'C.S.Lewis') correctAnswers++;
+                if (q6Answer.value === 'Desmond tutu') correctAnswers++;
+                if (q7Answer.value === 'Deepak chopra') correctAnswers++;
+                if (q8Answer.value === 'carl sandburg') correctAnswers++;
+                if (q9Answer.value === 'walt disney') correctAnswers++;
+                if (q10Answer.value === 'Franklin D roosevelt') correctAnswers++;
+                
+                // Display feedback
+                var feedback = document.getElementById('quiz-feedback');
+                feedback.innerHTML = 'You got ' + correctAnswers + ' out of 10 questions correct.';
+                feedback.style.display = 'block';
+            } else {
+                // Display error message if not all questions are answered
+                alert('Please answer all questions before submitting.');
+            }
+        });
+    </script>
+</body>
+</html>

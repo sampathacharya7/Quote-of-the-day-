@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #f21a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #16e624;
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 120%;
+    background-color: azure;
+}
+
+#quote {
+    border: 1px solid #ccc;
+    
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: auto;
+    max-width: 80%;
+}
+
+#new-quote-btn {
+    background-color: #0fdb38;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#new-quote-btn:hover {
+    background-color: #e8095b;
+}

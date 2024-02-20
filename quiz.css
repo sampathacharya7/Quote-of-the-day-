@@ -1,0 +1,62 @@
+body{
+    font-family: 'Arial', sans-serif;
+    color:#fff;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230524/pngtree-an-image-of-a-digital-network-with-blue-dots-image_2608723.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250vh;
+    font-size: 30px;
+    overflow: scroll;
+    
+}
+nav {
+    background-color: #d11414; /* Background color of the navigation bar */
+    padding: 10px; /* Padding around the navigation bar */
+    position: fixed; /* Position the navigation bar relative to the viewport */
+    top: 0; /* Position the navigation bar at the top of the viewport */
+    left: 0; /* Position the navigation bar at the left side of the viewport */
+    width: 100%; /* Make the navigation bar span the full width of the viewport */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Spacing between list items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+nav ul li a {
+    color: #fff; /* Text color of navigation links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size of navigation links */
+    padding: 5px 10px; /* Padding around navigation links */
+}
+
+nav ul li a:hover {
+    background-color: #fd0b0b; /* Background color of navigation links on hover */
+}
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make it a block element to apply margin auto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
